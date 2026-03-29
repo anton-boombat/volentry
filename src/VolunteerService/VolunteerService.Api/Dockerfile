@@ -20,6 +20,7 @@ RUN dotnet build "src/VolunteerService/VolunteerService.Api/VolunteerService.Api
     -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "src/VolunteerService/VolunteerService.Api/VolunteerService.Api.csproj" \
     -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
