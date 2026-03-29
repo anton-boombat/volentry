@@ -1,0 +1,9 @@
+# Copy this file to terraform.tfvars and fill in values
+
+environment        = "dev"
+location           = "australiaeast"
+cosmosdb_free_tier = false  # set true if no free tier used in this subscription yet
+
+tags = {
+  owner = "your-name"
+}
