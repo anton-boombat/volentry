@@ -1,0 +1,100 @@
+# Environment & Configuration
+.env
+.env.local
+.env.*.local
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Build Artifacts
+bin/
+obj/
+dist/
+build/
+.nuget/
+
+# Node (for any frontend builds)
+node_modules/
+package-lock.json
+yarn.lock
+.next/
+dist/
+build/
+
+# Test Coverage
+coverage/
+.nyc_output/
+
+# Runtime Files
+*.log
+*.bak
+*.tmp
+*.pid
+
+# Git
+.gitkeep
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Certificates & Keys (NEVER COMMIT)
+*.pfx
+*.pem
+*.key
+*.crt
+*.cer
+
+# Azure
+local.settings.json
+*.azurewebsites.net
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Session Files
+.copilot/session-state/**/temp/
+.copilot/session-state/**/*-temp.md
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+.db/
+
+# Backup Files
+*.bak
+*.backup
+
+# Terraform (except main configs)
+.terraform/
+*.tfstate
+*.tfstate.*
+.tfvars
+!*.tf
+!*.auto.tfvars
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# IDE Workspace
+.vscode/settings.json
+.vscode/extensions.json
