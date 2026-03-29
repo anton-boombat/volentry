@@ -22,6 +22,11 @@ resource "azurerm_cosmosdb_sql_database" "volentry" {
   name                = "volentry"
   resource_group_name = azurerm_resource_group.main.name
   account_name        = azurerm_cosmosdb_account.main.name
+
+  # Shared autoscale throughput — containers inherit this unless they set their own
+  autoscale_settings {
+    max_throughput = 1000
+  }
 }
 
 # Event store — partition key is /orgSlug for multi-tenant isolation

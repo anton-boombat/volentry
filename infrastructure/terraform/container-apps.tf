@@ -51,7 +51,7 @@ resource "azurerm_container_app" "volunteer_service" {
 
       env {
         name  = "ASPNETCORE_ENVIRONMENT"
-        value = var.environment == "prod" ? "Production" : "Staging"
+        value = var.environment == "prod" ? "Production" : var.environment == "dev" ? "Development" : "Staging"
       }
 
       env {
@@ -132,7 +132,7 @@ resource "azurerm_container_app" "admin_service" {
 
       env {
         name  = "ASPNETCORE_ENVIRONMENT"
-        value = var.environment == "prod" ? "Production" : "Staging"
+        value = var.environment == "prod" ? "Production" : var.environment == "dev" ? "Development" : "Staging"
       }
 
       env {
